@@ -15,7 +15,9 @@ document.getElementById('paymentForm').addEventListener('submit', function (even
     formData.append('qr', document.getElementById('imagen').files[0]);
 
     // Enviar los datos al endpoint utilizando Fetch
-    fetch('http://localhost:3000/carrier/accounts/' + idCarrier, {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/accounts/' + idCarrier, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`,

@@ -5,8 +5,9 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
         email_carrier: document.getElementById('email').value,
         password_carrier: document.getElementById('password').value
     };
-
-    fetch('http://localhost:3000/carrier/login', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

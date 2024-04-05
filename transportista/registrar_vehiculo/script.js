@@ -21,8 +21,9 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     formData.append('model_vehicle', document.getElementById('modelo').value);
     formData.append('cylinder_capacity_vehicle', document.getElementById('cilindraje').value);
     formData.append('image_vehicle', document.getElementById('photo').files[0]);
-
-    fetch('http://localhost:3000/carrier/vehicle/register', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/vehicle/register', {
         method: 'POST',
         body: formData,
     })

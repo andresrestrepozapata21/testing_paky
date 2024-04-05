@@ -15,8 +15,9 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         description_cba: document.getElementById('descripcion').value,
         fk_id_carrier_cba: document.getElementById('id_carrier').value,
     };
-
-    fetch('http://localhost:3000/carrier/registerCarrierBankAccount', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/registerCarrierBankAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -5,7 +5,9 @@ const idCarrier = urlParams.get('id');
 const token = urlParams.get('token');
 
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:3000/carrier/detailsPackage', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/detailsPackage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -87,7 +89,8 @@ function handlePackageAction(packageId, index) {
     formData.append('evidence', document.getElementById(`file_${index}`).files[0]);
     formData.append('id_p', packageId);
     formData.append('type_evidence', 1);
-    fetch('http://localhost:3000/carrier/deliverPackage', {
+
+    fetch(window.myAppConfig.development + '/carrier/deliverPackage', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,

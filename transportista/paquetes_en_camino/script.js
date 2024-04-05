@@ -3,7 +3,9 @@ const urlParams = new URLSearchParams(window.location.search);
 const idCarrier = urlParams.get('id');
 const token = urlParams.get('token');
 document.addEventListener('DOMContentLoaded', function () {
-    fetch('http://localhost:3000/carrier/onTheWayPackage', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/onTheWayPackage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

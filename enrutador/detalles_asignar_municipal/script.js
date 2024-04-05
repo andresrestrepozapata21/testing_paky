@@ -40,7 +40,7 @@ function enviarDatosDeAsignacion() {
         ids_p: idsPaquetes
     };
 
-    fetch('http://localhost:3000/routerUser/toAsignatePackages', {
+    fetch( window.myAppConfig.development + '/routerUser/toAsignatePackages', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -68,7 +68,7 @@ function enviarDatosDeAsignacion() {
 }
 
 async function cargarDatosDelServidor() {
-    const url = "http://localhost:3000/routerUser/getDetailAsignate"; // Reemplaza esto con la URL de tu endpoint
+    const url = window.myAppConfig.development + "/routerUser/getDetailAsignate"; // Reemplaza esto con la URL de tu endpoint
 
     try {
         const response = await fetch(url, {
@@ -143,7 +143,7 @@ function mostrarDetallePaquete(idPaquete) {
         id_p: idPaquete,
     };
     // Realizar la petición Fetch para obtener los productos del paquete
-    fetch(`http://localhost:3000/routerUser/getProductsPackage`, {
+    fetch(window.myAppConfig.development + `/routerUser/getProductsPackage`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

@@ -5,8 +5,9 @@ const token = urlParams.get('token');
 
 document.addEventListener('DOMContentLoaded', function () {
     // Resto del código para capturar parámetros y hacer el fetch...
-
-    fetch('http://localhost:3000/carrier/history', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/history', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

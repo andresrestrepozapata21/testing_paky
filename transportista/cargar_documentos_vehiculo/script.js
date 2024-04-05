@@ -18,8 +18,9 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     formData.append('documents', document.getElementById('file2').files[0]);
     formData.append('id_vehicle', document.getElementById('id_vehicle').value);
     formData.append('id_carrier', document.getElementById('id_carrier').value);
-
-    fetch('http://localhost:3000/carrier/vehicle/loadDocuments', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/vehicle/loadDocuments', {
         method: 'POST',
         body: formData,
     })

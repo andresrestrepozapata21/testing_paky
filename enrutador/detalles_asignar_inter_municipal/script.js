@@ -39,8 +39,9 @@ function enviarDatosDeAsignacion() {
         id_carrier, // Asume un ID fijo, reemplázalo por el ID real del transportista
         ids_p: idsPaquetes
     };
-
-    fetch('http://localhost:3000/routerUser/toAsignatePackages', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/routerUser/toAsignatePackages', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -56,7 +57,7 @@ function enviarDatosDeAsignacion() {
         })
         .then(data => {
             console.log(data);
-            if(data.result = 1){
+            if (data.result = 1) {
                 alert('Paquetes asignados correctamente.');
                 window.location.reload();
             }
@@ -68,7 +69,7 @@ function enviarDatosDeAsignacion() {
 }
 
 async function cargarDatosDelServidor() {
-    const url = "http://localhost:3000/routerUser/getDetailAsignateInter"; // Reemplaza esto con la URL de tu endpoint
+    const url = window.myAppConfig.development + "/routerUser/getDetailAsignateInter"; // Reemplaza esto con la URL de tu endpoint
 
     try {
         const response = await fetch(url, {
@@ -88,7 +89,7 @@ async function cargarDatosDelServidor() {
 
         // Asumiendo que 'data' contiene las propiedades 'data_carrier' y 'data_packages'
         cargarInformacionTransportista(data.data_carrier[0]);
-        cargarTablaPaquetes(data.data_free_packages, data.data_asignated_packages ,data.data_carrier[0].vehicle.capacity_vehicle);
+        cargarTablaPaquetes(data.data_free_packages, data.data_asignated_packages, data.data_carrier[0].vehicle.capacity_vehicle);
     } catch (error) {
         console.error('Error al cargar los datos del servidor:', error);
     }
@@ -107,7 +108,7 @@ function cargarInformacionTransportista(transportista) {
     `;
 }
 
-function cargarTablaPaquetes(paquetes, paquetes_asignados ,capacidadVehiculo) {
+function cargarTablaPaquetes(paquetes, paquetes_asignados, capacidadVehiculo) {
     const tbody = document.getElementById('tabla-paquetes').getElementsByTagName('tbody')[0];
     const tbody2 = document.getElementById('tabla-paquetes-asignated').getElementsByTagName('tbody')[0];
     paquetes_asignados.forEach((paquete) => {
@@ -143,7 +144,7 @@ function mostrarDetallePaquete(idPaquete) {
         id_p: idPaquete,
     };
     // Realizar la petición Fetch para obtener los productos del paquete
-    fetch(`http://localhost:3000/routerUser/getProductsPackage`, {
+    fetch(window.myAppConfig.development + `/routerUser/getProductsPackage`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

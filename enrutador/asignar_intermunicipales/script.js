@@ -5,7 +5,9 @@ const token = urlParams.get('token');
 
 document.addEventListener('DOMContentLoaded', function () {
     // Realizar la petición Fetch al endpoint
-    fetch('http://localhost:3000/routerUser/getCarriersInter', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/routerUser/getCarriersInter', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -56,7 +58,9 @@ document.addEventListener('DOMContentLoaded', function () {
             id_carrier: carrierId,
         };
         // Realizar la petición Fetch al endpoint de paquetes del transportista
-        fetch(`http://localhost:3000/routerUser/getPackagesCarrier`, {
+        // window.myAppConfig.development
+        // window.myAppConfig.production
+        fetch( window.myAppConfig.development + `/routerUser/getPackagesCarrier`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

@@ -5,8 +5,9 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
         email_ru: document.getElementById('email').value,
         password_ru: document.getElementById('password').value
     };
-
-    fetch('http://localhost:3000/routerUser/login', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/routerUser/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

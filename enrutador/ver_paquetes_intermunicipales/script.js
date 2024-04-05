@@ -5,7 +5,7 @@ const token = urlParams.get('token');
 
 document.addEventListener('DOMContentLoaded', function () {
     // Realizar la petición Fetch al endpoint
-    fetch('http://localhost:3000/routerUser/getInterCityPackages', {
+    fetch(window.myAppConfig.development + '/routerUser/getInterCityPackages', {
         method: 'GET',
         headers: {
             'Content-Type': 'application/json',
@@ -74,7 +74,7 @@ document.addEventListener('DOMContentLoaded', function () {
             id_p: packageId,
         };
         // Realizar la petición Fetch para obtener los productos del paquete
-        fetch(`http://localhost:3000/routerUser/getProductsPackage`, {
+        fetch(window.myAppConfig.development + `/routerUser/getProductsPackage`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

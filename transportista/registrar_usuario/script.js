@@ -12,8 +12,9 @@ document.getElementById('registrationForm').addEventListener('submit', function 
         fk_id_city_carrier: document.getElementById('ciudades').value,
         fk_id_td_carrier: document.getElementById('tipoDocumento').value,
     };
-
-    fetch('http://localhost:3000/carrier/register', {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/carrier/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -35,7 +36,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
 
 // Función para obtener los departamentos desde la API
 function getDepartments() {
-    fetch('http://localhost:3000/utils/departments')
+    fetch(window.myAppConfig.development + '/utils/departments')
         .then(response => response.json())
         .then(data => {
             const departamentos = data.data;
@@ -60,8 +61,9 @@ function getCities(departmentId, citiesSelectId) {
     const formData = {
         fk_id_d_city: departmentId
     };
-
-    fetch(`http://localhost:3000/utils/cities`, {
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + `/utils/cities`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -97,7 +99,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Función para obtener los tipos de documentos desde la API
 function getTypesCarrier() {
-    fetch('http://localhost:3000/utils/typesCarrier')
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/utils/typesCarrier')
         .then(response => response.json())
         .then(data => {
             const tiposDocumento = data.data;
@@ -115,13 +119,15 @@ function getTypesCarrier() {
 }
 
 // Llamar a la función para obtener los tipos de documento al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     getTypesCarrier();
 });
 
 // Función para obtener los tipos de documentos desde la API
 function getDocumentTypes() {
-    fetch('http://localhost:3000/utils/typeDocuments')
+    // window.myAppConfig.development
+    // window.myAppConfig.production
+    fetch(window.myAppConfig.development + '/utils/typeDocuments')
         .then(response => response.json())
         .then(data => {
             const tiposDocumento = data.data;
@@ -139,7 +145,7 @@ function getDocumentTypes() {
 }
 
 // Llamar a la función para obtener los tipos de documento al cargar la página
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
     getDocumentTypes();
 });
 
