@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subir Archivos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="uploadForm">
+            <h2>Subir Archivos Vehiculo</h2>
+            <div class="form-group">
+                <label for="id">ID Carrier:</label>
+                <input type="text" id="id_carrier" name="id_carrier" required>
+            </div>
+            <div class="form-group">
+                <label for="id">ID Vehiculo:</label>
+                <input type="text" id="id_vehicle" name="id_vehicle" required>
+            </div>
+            <div class="form-group">
+                <label for="file1">Archivo 1:</label>
+                <input type="file" id="file1" name="file1" required>
+            </div>
+            <div class="form-group">
+                <label for="file2">Archivo 2:</label>
+                <input type="file" id="file2" name="file2" required>
+            </div>
+            <button type="submit">Subir</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

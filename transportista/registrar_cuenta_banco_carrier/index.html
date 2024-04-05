@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro cuenta banco</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="registrationForm">
+            <h2>Registro cuenta de banco</h2>
+            <div class="form-group">
+                <label for="id_carrier">id Transportista:</label>
+                <input type="text" id="id_carrier" name="id_carrier" required>
+            </div>
+            <div class="form-group">
+                <label for="banco">banco:</label>
+                <select id="banco" name="banco" required>
+                    <option value="">Selecciona un tipo de Transportista</option>
+                    <option value="Bancolombia">Bancolombia</option>
+                    <option value="Banco Bogota">Banco Bogota</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tipoCuenta">Tipo cuenta:</label>
+                <select id="tipoCuenta" name="tipoCuenta" required>
+                    <option value="">Selecciona un tipo de documento</option>
+                    <option value="Corriente">Corriente</option>
+                    <option value="Ahorros">Ahorros</option>
+                </select>
+            </div>            
+            <div class="form-group">
+                <label for="numeroCuenta">Número de cuenta:</label>
+                <input type="text" id="numeroCuenta" name="numeroCuenta" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripcion:</label>
+                <input type="text" id="descripcion" name="descripcion" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <form id="uploadForm">
+            <h2>Registro de vehiculo del transportista</h2>
+            <div class="form-group">
+                <label for="id" style="color: red; text-align: center;">ID transportista:</label>
+                <input type="tel" id="id_carrier" name="id_carrier" required>
+            </div>
+            <div class="form-group">
+                <label for="placa">Placa:</label>
+                <input type="tel" id="placa" name="placa" required>
+            </div>
+            <div class="form-group">
+                <label for="marca">Marca:</label>
+                <input type="text" id="marca" name="marca" required>
+            </div>
+            <div class="form-group">
+                <label for="linea">Linea:</label>
+                <input type="text" id="linea" name="linea" required>
+            </div>
+            <div class="form-group">
+                <label for="modelo">Modelo:</label>
+                <input type="text" id="modelo" name="modelo" required>
+            </div>
+            <div class="form-group">
+                <label for="clase">Clase:</label>
+                <input type="text" id="clase" name="clase" required>
+            </div>
+            <div class="form-group">
+                <label for="color">Color:</label>
+                <input type="text" id="color" name="color" required>
+            </div>
+            <div class="form-group">
+                <label for="cilindraje">Cilindraje:</label>
+                <input type="text" id="cilindraje" name="cilindraje" required>
+            </div>
+            <div class="form-group">
+                <label for="descripcion">Descripcion: (Opcional)</label>
+                <input type="text" id="descripcion" name="descripcion">
+            </div>
+            <div class="form-group">
+                <label for="file">Foto del Vehiculo:</label>
+                <input type="file" id="photo" name="photo" required>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Usuario</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <form id="registrationForm">
+            <h2>Registro de Transportista</h2>
+            <div class="form-group">
+                <label for="tipoTransportista">Tipo de Transportista:</label>
+                <select id="tipoTransportista" name="tipoTransportista" required>
+                    <option value="">Selecciona un tipo de Transportista</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="tipoDocumento">Tipo de Documento:</label>
+                <select id="tipoDocumento" name="tipoDocumento" required>
+                    <option value="">Selecciona un tipo de documento</option>
+                </select>
+            </div>            
+            <div class="form-group">
+                <label for="NumeroD">Número de documento:</label>
+                <input type="text" id="NumeroD" name="NumeroD" required>
+            </div>
+            <div class="form-group">
+                <label for="nombres">Nombres:</label>
+                <input type="text" id="nombres" name="nombres" required>
+            </div>
+            <div class="form-group">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+            <div class="form-group">
+                <label for="telefono">Teléfono:</label>
+                <input type="tel" id="telefono" name="telefono" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Contraseña:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="departamento">Departamento:</label>
+                <select id="departamento" name="departamento" onchange="getCities(this.value, 'ciudades')" required>
+                    <option value="">Selecciona un departamento</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="ciudades">Ciudades:</label>
+                <select id="ciudades" name="ciudades" required>
+                    <option value="">Selecciona un departamento primero</option>
+                </select>
+            </div>
+            <button type="submit">Registrar</button>
+        </form>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>

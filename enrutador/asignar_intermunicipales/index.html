@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>asignar paquetes inter municipales</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.5/css/jquery.dataTables.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>asignar paquetes inter municipales</h1>
+        <table id="dataTable" class="display">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo de Documento</th>
+                    <th>Número de Documento</th>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Teléfono</th>
+                    <th>Email</th>
+                    <th>Tipo transportador</th>
+                    <th>Productos</th>
+                    <th>Estado de Capacidad</th>
+                    <th>Acción</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Los datos se agregarán aquí dinámicamente -->
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Modal para mostrar los paquetes -->
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2>Paquetes Asignados</h2>
+            <table id="packageTable" class="display">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Orden</th>
+                        <th>Nombre del Cliente</th>
+                        <th>Teléfono del Cliente</th>
+                        <th>Número de Guía</th>
+                        <th>Estado</th>
+                        <th>¿Con Cobro?</th>
+                        <th>Precio Total</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los datos de los paquetes se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <br><br><br><br>
+    <div class="btns">
+        <button id="inicio">Inicio</button>
+        <button id="pkgMunici">Paquetes municipales</button>
+        <button id="asignarMuni">Asignar paquetes municipales</button>
+        <button id="pkgInter">Paquetes inter municipales</button>
+        <button id="asignarInter">Asignar paquetes inter municipales</button>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/1.11.5/js/jquery.dataTables.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

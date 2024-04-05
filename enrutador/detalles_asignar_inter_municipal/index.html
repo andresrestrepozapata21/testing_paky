@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>detalle y asignar paquetes Inter</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="info-transportista"></div>
+    <table id="tabla-paquetes-asignated">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Orden</th>
+                <th>Cliente</th>
+                <th>Número de Guía</th>
+                <th>Total</th>
+                <th>Productos</th>
+                <th>Seleccionar</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <br><br><br>
+    <table id="tabla-paquetes">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Orden</th>
+                <th>Cliente</th>
+                <th>Número de Guía</th>
+                <th>Total</th>
+                <th>Productos</th>
+                <th>Seleccionar</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+    <br><br><br><br>
+    <!-- Justo después de tu tabla de paquetes -->
+    <div class="acciones">
+        <button id="btnAsignar" disabled>Asignar</button>
+        <button id="btnRegresar">Regresar</button>
+    </div>
+
+    <br><br><br><br>
+    <div class="btns">
+        <button id="inicio">Inicio</button>
+        <button id="pkgMunici">Paquetes municipales</button>
+        <button id="asignarMuni">Asignar paquetes municipales</button>
+        <button id="pkgInter">Paquetes inter municipales</button>
+        <button id="asignarInter">Asignar paquetes inter municipales</button>
+    </div>
+
+    <!-- Modal -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <h2>Productos del Paquete</h2>
+            <table id="productTable" class="display">
+                <thead>
+                    <tr>
+                        <th>ID Producto</th>
+                        <th>Nombre</th>
+                        <th>Descripción</th>
+                        <th>Cantidad</th>
+                        <th>Precio Unitario</th>
+                        <th>Total</th>
+                        <th>Tamaño</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Los datos se agregarán aquí dinámicamente -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
