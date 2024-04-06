@@ -17,7 +17,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     };
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/registerCarrierBankAccount', {
+    fetch(window.myAppConfig.production + '/carrier/registerCarrierBankAccount', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

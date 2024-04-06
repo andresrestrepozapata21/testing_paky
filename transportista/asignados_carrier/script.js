@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Resto del código para capturar parámetros y hacer el fetch...
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/asignatedPackage', {
+    fetch(window.myAppConfig.production + '/carrier/asignatedPackage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -56,7 +56,7 @@ function displayPackages(packages) {
 function handlePackageAction(packageId) {
     console.log("Realizando acción para el paquete con ID:", packageId);
     // Aquí puedes realizar la llamada fetch al otro endpoint usando el packageId
-    fetch(window.myAppConfig.development + '/carrier/confirmatePackage', {
+    fetch(window.myAppConfig.production + '/carrier/confirmatePackage', {
         method: 'POST', // o 'GET', dependiendo de tu endpoint
         headers: {
             'Content-Type': 'application/json',

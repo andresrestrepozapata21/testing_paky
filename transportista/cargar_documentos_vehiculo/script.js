@@ -20,7 +20,7 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     formData.append('id_carrier', document.getElementById('id_carrier').value);
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/vehicle/loadDocuments', {
+    fetch(window.myAppConfig.production + '/carrier/vehicle/loadDocuments', {
         method: 'POST',
         body: formData,
     })

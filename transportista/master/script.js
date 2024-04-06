@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Resto del código para capturar parámetros y hacer el fetch...
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/master', {
+    fetch(window.myAppConfig.production + '/carrier/master', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

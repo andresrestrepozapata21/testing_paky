@@ -5,7 +5,7 @@ const token = urlParams.get('token');
 document.addEventListener('DOMContentLoaded', function () {
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/onTheWayPackage', {
+    fetch(window.myAppConfig.production + '/carrier/onTheWayPackage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

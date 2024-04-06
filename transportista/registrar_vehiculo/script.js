@@ -23,7 +23,7 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     formData.append('image_vehicle', document.getElementById('photo').files[0]);
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/vehicle/register', {
+    fetch(window.myAppConfig.production + '/carrier/vehicle/register', {
         method: 'POST',
         body: formData,
     })

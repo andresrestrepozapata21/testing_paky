@@ -17,7 +17,7 @@ document.getElementById('paymentForm').addEventListener('submit', function (even
     // Enviar los datos al endpoint utilizando Fetch
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/accounts/' + idCarrier, {
+    fetch(window.myAppConfig.production + '/carrier/accounts/' + idCarrier, {
         method: 'PUT',
         headers: {
             'Authorization': `Bearer ${token}`,

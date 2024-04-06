@@ -7,7 +7,7 @@ const token = urlParams.get('token');
 document.addEventListener('DOMContentLoaded', function () {
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/detailsPackage', {
+    fetch(window.myAppConfig.production + '/carrier/detailsPackage', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -90,7 +90,7 @@ function handlePackageAction(packageId, index) {
     formData.append('id_p', packageId);
     formData.append('type_evidence', 1);
 
-    fetch(window.myAppConfig.development + '/carrier/deliverPackage', {
+    fetch(window.myAppConfig.production + '/carrier/deliverPackage', {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,

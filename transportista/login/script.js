@@ -7,7 +7,7 @@ document.getElementById('uploadForm').addEventListener('submit', function (event
     };
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/login', {
+    fetch(window.myAppConfig.production + '/carrier/login', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',

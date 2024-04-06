@@ -14,7 +14,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
     };
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/carrier/register', {
+    fetch(window.myAppConfig.production + '/carrier/register', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -36,7 +36,7 @@ document.getElementById('registrationForm').addEventListener('submit', function 
 
 // Función para obtener los departamentos desde la API
 function getDepartments() {
-    fetch(window.myAppConfig.development + '/utils/departments')
+    fetch(window.myAppConfig.production + '/utils/departments')
         .then(response => response.json())
         .then(data => {
             const departamentos = data.data;
@@ -63,7 +63,7 @@ function getCities(departmentId, citiesSelectId) {
     };
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + `/utils/cities`, {
+    fetch(window.myAppConfig.production + `/utils/cities`, {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
@@ -101,7 +101,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function getTypesCarrier() {
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/utils/typesCarrier')
+    fetch(window.myAppConfig.production + '/utils/typesCarrier')
         .then(response => response.json())
         .then(data => {
             const tiposDocumento = data.data;
@@ -127,7 +127,7 @@ document.addEventListener('DOMContentLoaded', function () {
 function getDocumentTypes() {
     // window.myAppConfig.development
     // window.myAppConfig.production
-    fetch(window.myAppConfig.development + '/utils/typeDocuments')
+    fetch(window.myAppConfig.production + '/utils/typeDocuments')
         .then(response => response.json())
         .then(data => {
             const tiposDocumento = data.data;
